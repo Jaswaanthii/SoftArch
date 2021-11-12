@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Update Details</title>
+<link href='https://fonts.googleapis.com/css?family=Tomorrow' rel='stylesheet'>
+<style>
+    body, html {
+    height: 100%;
+    margin: 0; 
+    font-family: 'Tomorrow';
+    background: url("https://www.wallpapertip.com/wmimgs/221-2216136_wallpaper-fade.jpg") no-repeat center center fixed; 
+    background-size: cover;
+}
+</style>
+</head>
+<body>
+    <div class="bg">
+    <div align="center">
+        <h1>Edit Details</h1>
+        <br />
+        <form action="#" th:action="@{/save_ftuser}" th:object="${ftuser}"
+            method="post">
+ 
+            <table border="0" cellpadding="10">
+                <tr>             
+                    <td>Username</td>
+                    <td>
+                        <input type="text" th:field="*{username}" readonly="readonly"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shift</td>
+                    <td>
+                        <input type="text" th:field="*{dtype}"/>
+                    </td>
+                </tr>   
+                <tr>
+                    <td>Email</td>
+                    <td><input type="text" th:field="*{email}" /></td>
+                </tr>               
+                <tr>
+                    <td>Hours</td>
+                    <td><input type="text" th:field="*{grade}" /></td>
+                </tr>
+                <tr>
+                    <td>Team</td>
+                    <td><input type="text" th:field="*{team}" /></td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td><input type="text" th:field="*{contract}" /></td>
+                </tr>                                    
+                <tr>
+                    <td colspan="2"><button type="submit">Update</button> </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
